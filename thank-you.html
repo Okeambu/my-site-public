@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thank You</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: transparent; /* Прозрачный фон */
+        }
+        .thank-you-container {
+            background-color: #908080; /* Цвет заливки контейнера */
+            border-radius: 60px; /* Округлые углы */
+            padding: 50px 30px; /* Внутренние отступы */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Лёгкая тень для объёма */
+            width: 300px; /* Уменьшенная ширина контейнера */
+            text-align: center; /* Выравнивание текста */
+        }
+        .thank-you-container h2 {
+            color: #FFFFFF; /* Цвет заголовка */
+            margin-bottom: 5px; /* Отступ ниже заголовка */
+            margin-top: -3px; /* Поднимаем заголовок выше */
+        }
+        .thank-you-container p {
+            color: #FFFFFF; /* Цвет текста */
+            font-size: 1em; /* Уменьшенный размер текста */
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <h2>Thank you!</h2>
+        <p>Your form was successfully submitted.</p>
+        <p>We’ll get back to you shortly. Please stay tuned!</p>
+    </div>
+
+<script>
+    // Отправляем сообщение родителю сразу после загрузки страницы
+    window.addEventListener('DOMContentLoaded', () => {
+      window.parent.postMessage({ formSubmitted: true }, '*');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1183 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.nunito-text {
+    font-family: 'Nunito', sans-serif;
+}
+
+.russo-text {
+    font-family: 'Russo One', sans-serif;
+}
+
+.roboto-text {
+    font-family: 'Roboto', sans-serif;
+}
+
+.gideon-text {
+    font-family: 'Gideon Roman', serif;
+    font-size: 1.5rem; /* Размер шрифта */
+    font-weight: bold; /* Жирное начертание */
+    color: #bfff00; /* Цвет текста */
+}
+    
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #231F1B;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.header {
+    background: url('images/image-up.jpeg') no-repeat center/cover;
+    height: clamp(200px, 40vh, 600px);
+    position: relative;
+    background-color: transparent; /* Выключение цвета через прозрачность */
+}
+
+
+
+.btn {
+    display: inline-block;
+    background-color: #908080;
+    color: #fff;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.blink {
+    animation: blink 0.55s ease-in-out 2; /* Только мигание */
+}
+
+.btn:hover {
+    background-color: #d8c8c8;
+}
+
+
+
+
+
+body #cta-button {
+    width: 200px; /* Более специфичный селектор */
+}
+
+
+
+.logo {
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+.logo img {
+    max-width: clamp(250px, 10vw, 200px);
+    z-index: 10;
+}
+
+h1 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 2.5rem;
+    color: #FAF3E0;
+}
+
+h2 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 2.0rem;
+    color: #FAF3E0;
+}
+
+p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.intro {
+    text-align: center;
+    padding: 65px 0;
+}
+
+.about,
+.services {
+    padding: 10px 0;
+}
+
+/* Основное исправление: фиксируем размер шрифта внутри блока .service */
+.service p {
+    font-size: 0.3rem;
+    color: #FFFFFF;
+}
+
+
+
+.service {
+    background-color: transparent;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 40px !important;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+
+
+
+.service:hover {
+    background-color: #808080 ! important;
+}
+
+.service a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
+.service .icon {
+    font-size: 3rem;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.service p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700; /* Жирный стиль */
+    font-size: 1rem;
+    color: #FFFFFF;
+}
+
+
+footer {
+    background-color: #1C1814;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+.services-grid {
+    display: grid;
+    gap: 20px;
+    /* по-умолчанию — две колонки */
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    .services-grid {
+        /* на портретных телефонах — одна колонка */
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+.service {
+    min-height: 120px; /* или 120px, подгони под оригинальный вид */
+}
+
+
+
+/* Заголовок — вернул оригинальный размер */
+h1 {
+    font-size: 1.2rem; /* Сохранил твой вариант */
+}
+
+/* Верстка кнопок НЕ изменена */
+
+/* Маленькие экраны (до 300px) */
+/*@media screen and (max-width: 300px) {
+    .logo img {
+        max-width: 225px; /* Увеличен в 1.5 раза */
+    /*}
+
+  /*  .header {
+        height: 50vh;
+        background-size: contain;
+    }
+
+    .logo {
+        position: absolute;
+        bottom: clamp(-40px, -8vw, -30px); /* Логотип ниже */
+        /*left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .service {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service .icon {
+        margin-bottom: 10px; /* Оставил оригинальное значение */
+    /*}
+
+ 
+}
+/* Мобильные устройства (до 480px) */
+/*@media screen and (max-width: 480px) {
+    .logo img {
+        max-width: 225px; /* Увеличен в 1.5 раза */
+    /*}
+
+    .header {
+        height: clamp(45vh, 12vw, 55vh);
+        background-size: cover;
+    }
+
+    .service {
+        padding: 15px;
+    }
+}
+
+/* Средние экраны (до 768px) */
+@media screen and (max-width: 768px) {
+    .logo img {
+        max-width: 250px; /* Пропорционально увеличил */
+    }
+
+    .header {
+        height: clamp(40vh, 14vw, 60vh);
+        background-size: cover;
+    }
+
+    .logo {
+        bottom: clamp(-50px, -10vw, -40px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .service {
+        padding: 20px;
+    }
+}
+
+/* Большие экраны (769px - 1024px) */
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .logo {
+        position: absolute;
+        bottom: var(--logo-bottom, clamp(-60px, -12vw, -45px)); /* Используем CSS-переменную */
+        left: 50%;
+        transform: translate(-50%, -15px);
+    }
+
+    .logo img {
+        max-width: 250px; /* Ограничение ширины логотипа */
+        height: auto;
+    }
+}
+
+
+
+
+    .service {
+        padding: 25px;
+    }
+}
+
+/* Десктопы и широкие экраны (1025px и больше) */
+@media screen and (min-width: 1025px) {
+    .logo img {
+        max-width: 400px;
+    }
+
+    .header {
+        height: clamp(60vh, 18vw, 70vh);
+        background-size: contain;
+    }
+
+    .logo {
+        bottom: clamp(-80px, -15vw, -60px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .service {
+        padding: 30px;
+    }
+}
+
+/* Горизонтальная ориентация (логотип уменьшен на 50%) */
+/* ✅ Новая версия */
+@media (orientation: landscape) {
+    .header {
+        height: 50vh;
+        background-image: url('images/image-landscape.jpeg');
+        background-size: cover;
+        background-color: transparent ; /* Критично важно */
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .logo {
+        bottom: clamp(-40px, -8vw, -30px);
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10; /* Добавьте эту строку */
+    }
+
+    .logo img {
+        max-width: min(35vw, 250px); /* Адаптивная логика */
+    }
+
+    .container {
+        width: 85%; /* Оптимально для широких экранов */
+        padding: 0 2vw; /* Горизонтальные отступы */
+    }
+}
+
+
+
+/* Скрытие синей обводки при клике мышкой */
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+*:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    background-color: transparent;
+}
+
+
+.template {
+    display: none; /* Контейнер скрыт изначально */
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #d8c8c8; /* Серый фон */
+    border-radius: 10px; /* Скруглённые углы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Лёгкая тень */
+    width: 90vw; /* Ширина контейнера как 90% от ширины экрана */
+    max-width: none; /* Убираем ограничение на максимальную ширину */
+    margin-left: auto; /* Центрируем */
+    margin-right: auto; /* Центрируем */
+}
+
+
+.template iframe {
+    width: 100%; /* Ширина формы */
+    height: 500px; /* Высота формы */
+    display: block; /* Убираем встроенный инлайновый стиль */
+    margin: 0 auto; /* Центрируем форму внутри контейнера */
+    border: none; /* Убираем рамку */
+}
+
+.scroll-up {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background: rgba(111, 0, 255, 0.5); /* Полупрозрачность */
+    color: #fff;
+    border: 2px solid #aaa;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 9999;
+}
+
+.scroll-up.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scroll-up.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+a[href^="mailto"] {
+    color: #fff; /* Белая неактивная */
+    text-decoration: none; /* Убирает подчеркивание */
+    transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+a[href^="mailto"]:hover,
+a[href^="mailto"]:active {
+    color: #908080; /* Серый при наведении или клике */
+}
+
+
+.service a {
+    border-radius: inherit !important;
+    overflow: hidden !important;
+}
+
+.service a:active {
+    transform: none !important;
+    box-shadow: none !important;
+    border-radius: inherit !important;
+    background-color: transparent !important;
+}
+
+
+
+a.service {
+    border-radius: 50px;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-color: #908080;
+    transition: background-color 0.3s ease;
+}
+
+
+
+a.service:active {
+    background-color: #d8c8c8 ! important; /* Светлый цвет при касании */
+}
+
+
+
+.service {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.3s ease;
+}
+
+.service:hover {
+    background-color: #e0e0e0;
+}
+
+.service .icon {
+    font-size: 2rem;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.service p {
+    margin: 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+
+.container,
+.section,
+section {
+    text-align: left !important;
+}
+
+
+
+/* Скрываем контейнер по умолчанию */
+#template-container {
+    position: relative;
+    display: none;
+}
+
+
+
+
+#thank-you-container {
+    display: none; /* Скрыт по умолчанию */
+    position: fixed; /* Фиксируем контейнер на экране */
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent; /* Прозрачный фон */
+    display: flex; /* Центрирование содержимого */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Устанавливаем высокий уровень слоя */
+}
+
+#thank-you-container iframe {
+    width: 90%; /* Задаём ширину iframe */
+    height: 90%; /* Задаём высоту iframe */
+    border: none; /* Убираем границы */
+    background-color: transparent; /* Прозрачный фон для iframe */
+}
+
+
+
+.mobile-note {
+    font-size: 0.8rem !important; /* Гарантированное уменьшение размера текста */
+    color: #908080 !important; /* Цвет текста */
+    display: block; /* Обеспечивает отображение */
+}
+
+
+
+.contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Исправляет смещение вправо */
+    width: 100%;
+    text-align: center;
+    white-space: normal;
+    padding: 20px; /* Внутренний отступ */
+    margin: 0 auto; /* Внешний отступ для полного центрирования */
+}
+
+
+@media screen and (orientation: portrait) {
+    h1 {
+        position: relative;
+        top: -20px; /* Поднимаем заголовок */
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* запрет на выделение текста */
+
+body {
+  user-select: none;
+}
+
+
+.icon img {
+    
+
+    width: 35px; /* Задайте нужную ширину */
+    height: auto; /* Высота автоматически подстроится */
+    display: block; /* Обеспечит корректное отображение */
+    margin: 0 auto; /* Центрирует анимацию внутри кнопки */
+}
+
+
+
+
+
+
+/* Стили для кнопки .service */
+.service {
+    font-size: 1.1rem; /* Стандартный размер шрифта */
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    
+}
+
+.service p {
+    font-size: inherit; /* Наследует шрифт от родителя */
+}
+
+/* Медиа-запрос для уменьшения шрифта на мобильных устройствах */
+@media (max-width: 768px) {
+    .service {
+        font-size: 0.6rem !important; /* Уменьшаем размер шрифта на 1.5 раза */
+    }
+}
+
+/* Дополнительные стили для анимации или эффекта наведения */
+.service:hover {
+    background-color: #f0f0f0;
+    border-color: #aaa;
+    font-size: 1.1rem;
+}
+
+
+/* Эффект текстуры через градиенты и тени */
+.service::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 25%, rgba(0,0,0,0.3) 50%, rgba(255,255,255,0.1) 75%);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Эффект нажатия */
+.service:active {
+  background: #3c3c3c;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.5), 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 600px) {
+  .service {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+.mobile-note {
+    font-size: 0.5rem;
+    color: #908080;
+    text-align: left;
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.services-grid {
+    /* Осветлённая схема */
+    --leather-dark: #444444; /* Светлее предыдущего #333333 */
+    --dot-color: rgba(255, 255, 255, 0.18); /* Более заметные точки */
+    --panel-radius: 25px;
+    --dot-size: 1.8px;
+    --dot-spacing: 16px;
+
+    position: relative;
+    padding: 30px;
+    border-radius: var(--panel-radius);
+    overflow: hidden;
+    background-color: var(--leather-dark);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.services-grid::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at center,
+        var(--dot-color) var(--dot-size),
+        transparent var(--dot-size)
+    );
+    background-size: var(--dot-spacing) var(--dot-spacing);
+    z-index: 0;
+    border-radius: inherit;
+}
+
+.services-grid::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow: 
+        inset 0 0 20px rgba(0, 0, 0, 0.4), /* Светлее тени */
+        0 0 12px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    pointer-events: none;
+    border-radius: inherit;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        --leather-dark: #3d3d3d; /* Адаптивный светлый оттенок */
+        --dot-spacing: 13px;
+        --panel-radius: 15px;
+        padding: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Базовый стиль */
+.service {
+    --amplitude: 1.6px; /* Было 0.8px → теперь 1.6px (увеличение в 2 раза) */
+    --press-depth: -4px;
+    --vibration-speed: 0.1s;
+    
+    background: #4a4a4a;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    transform-style: preserve-3d;
+    perspective: 500px;
+    will-change: transform;
+}
+
+/* Состояние нажатия */
+.service:active {
+    animation: 
+        press-down 0.2s forwards,
+        circular-vibration var(--vibration-speed) 0.2s infinite steps(4);
+}
+
+/* Анимация вдавливания */
+@keyframes press-down {
+    to {
+        transform: 
+            translateZ(var(--press-depth)) 
+            scale(0.99);
+    }
+}
+
+/* Круговая вибрация (амплитуда x2) */
+@keyframes circular-vibration {
+    0% { transform: translateZ(var(--press-depth)) scale(0.99) translate(0, 0); }
+    25% { transform: translateZ(var(--press-depth)) scale(0.99) translate(calc(var(--amplitude)), 0); }
+    50% { transform: translateZ(var(--press-depth)) scale(0.99) translate(0, calc(var(--amplitude))); }
+    75% { transform: translateZ(var(--press-depth)) scale(0.99) translate(calc(-1 * var(--amplitude)), 0); }
+    100% { transform: translateZ(var(--press-depth)) scale(0.99) translate(0, calc(-1 * var(--amplitude))); }
+}
+
+/* Возврат в исходное */
+.service:not(:active) {
+    transition: transform 0.6s cubic-bezier(0.18, 0.89, 0.32, 1.1);
+    animation: none;
+}
+
+
+
+
+
+.service {
+    --amplitude: 0.8px;
+    --press-depth: -4px;
+    --vibration-speed: 0.1s;
+    
+    /* Существующие стили */
+    background: #4a4a4a;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    transform-style: preserve-3d;
+    perspective: 500px;
+    will-change: transform;
+
+    /* Новые свойства для блокировки выделения */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+/* Остальные стили (.service:active, keyframes и т.д.) остаются без изменений */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.service {
+  transition: transform 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Здесь регулируем расстояние между кнопками */
+    justify-content: space-between; /* Это поможет равномерно распределить элементы */
+}
+
+.service {
+    flex: 1 1 calc(40% - 30px); /* Делаем кнопки на 33% ширины контейнера, с учетом gap */
+    
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 5px solid #ddd;
+    border-radius: 5px;
+    
+    transition: transform 0.3s ease-in-out; /* Для анимации увеличения */
+}
+
+.service:hover {
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+    z-index: 1;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .service {
+        flex: 1 1 100%; /* На мобильных устройствах кнопки будут по 1 в ряд */
+        font-size: 105% ! important;  /* Уменьшаем размер шрифта в 1.5 раза */
+    }
+}
+
+
+
+
+
+
+  .service p {
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
+    max-width: 200px;
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Пояснение для кнопок - ТОЛЬКО для тач-устройств
+ * Условие: устройство должно быть сенсорным экраном без hover-возможностей
+ */
+.mobile-note {
+  display: block;
+  font-size: 0.5rem;
+  color: #908080;
+  text-align: left;
+}
+
+
+
+
+
+
+#animation-card {
+  background-color: #6F00FF !important; /* Синий из предыдущих вариантов */
+  
+}
+
+
+
+
+#animation-card:active {
+  background-color: #9D6AFF !important; /* Светлый электрик-блю */
+  box-shadow: inset 0 0 10px #4B0082 !important;
+}
+
+
+
+.template {
+    display: none; /* Контейнер скрыт изначально */
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #d8c8c8; /* Серый фон */
+    border-radius: 10px; /* Скруглённые углы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Лёгкая тень */
+    width: 90vw; /* Ширина контейнера как 90% от ширины экрана */
+    max-width: none; /* Убираем ограничение на максимальную ширину */
+    margin-left: auto; /* Центрируем */
+    margin-right: auto; /* Центрируем */
+}
+
+iframe {
+    border-radius: 10px; /* Скругление углов */
+    width: 90vw; /* Ширина контейнера как 90% от ширины экрана */
+    height: 500px; /* Высота формы */
+    display: block; /* Убираем встроенный инлайновый стиль */
+    margin: 0 auto; /* Центрируем форму внутри контейнера */
+    border: none; /* Убираем рамку */
+}
+
+
+
+#animation-card2 {
+  background-color: #B19CD9 !important; /* Нежный лавандовый */
+}
+
+#animation-card2:active {
+  background-color: #D8CFFF !important; /* Светло-фиолетовый пастельный */
+  box-shadow: inset 0 0 10px #9A7FD1 !important; /* Мягкий фиолетовый */
+}
+
+
+
+
+
+
+
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.blink {
+  animation: blink 1s ease-in-out 3; /* мигает 3 раза */
+}
+
+
+
+
+
+#animation-card {
+  transition: opacity 0.15s ease-in-out;
+}
+
+
+
+
+
+/* Общие стили для кнопки */
+.rotating-button {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 120px; /* или auto, если высота задаётся иначе */
+  overflow: hidden;
+  /* border не указываем! */
+  /* Не меняем font-size и другие параметры текста */
+}
+
+/* Вращающийся фон только у нужной кнопки */
+.rotating-button .icon {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.rotating-button .icon img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(2);
+  opacity: 0.4;
+  animation: rotation 14s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  /* border не указываем! */
+}
+
+/* Стили текста — только нужные параметры, размер не увеличиваем */
+.rotating-button p {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  margin: 0;
+  padding: 24px 8px;
+  font-size: inherit; /* или явно ваш стандартный размер, например 1rem */
+  font-family: inherit;
+}
+
+/* Анимация вращения */
+@keyframes rotation {
+  0% { transform: scale(2.7) rotate(0deg);}
+  100% { transform: scale(2.7) rotate(360deg);}
+}
+
+
+
+
+.square-outer {
+  max-width: 320px;         /* Максимальная ширина квадрата */
+  width: 100%;              /* Резиновая ширина */
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;      /* Квадратная форма */
+  position: relative;
+  background: transparent !important;   /* Убираем бежевый фон */
+  box-shadow: none;         /* Нет внешней тени */
+  padding: 0;               /* Нет внутренних отступов */
+  border: none;
+}
+
+.square-inner {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;         /* Убираем скругления, если не нужны */
+  overflow: hidden;
+  background: transparent !important;   /* Убираем внутренний фон */
+  box-shadow: none;
+  padding: 0;
+  border: none;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+.square-inner iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: transparent !important;   /* Убираем фон у iframe */
+}
+
+
+
+#template-container-3.template {
+    background-color: transparent !important;
+
+    box-shadow: none;
+    padding: 0;
+}
+
+
+
+
+
+@media screen and (max-width: 767px) {
+  .services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .service {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .service {
+    flex: 0 0 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+  }
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 1024px) {
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Три равные колонки */
+    gap: 30px; /* Отступы между кнопками */
+    padding: 30px; /* Внутренние отступы */
+  }
+
+  .service {
+    width: 100%; /* Кнопка занимает всю ширину своей ячейки */
+    max-width: none; /* Снимаем ограничения, управляет grid */
+    min-height: 140px; /* Можно адаптировать под контент */
+    padding: 20px; /* Внутренний отступ */
+    box-sizing: border-box;
+  }
+}

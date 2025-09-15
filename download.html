@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Download Your Gift</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Фон: от темно-фиолетового снизу до Electric Indigo сверху */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            text-align: center;
+            background: linear-gradient(to top, #3D0070, #6F00FF);
+            font-family: 'Rubik', sans-serif;
+            padding: 8vh 5vw;
+        }
+
+        /* Заголовок */
+        h1 {
+            font-size: 6vh;
+            margin-bottom: 2vh;
+            color: white;
+        }
+
+        /* Описание */
+        p {
+            font-size: 2vh;
+            margin-bottom: 3vh;
+            max-width: 60vw;
+            color: white;
+        }
+
+        /* Контейнер изображения с черным паспарту */
+        .image-container {
+            position: relative;
+            width: min(60vw, 60vh);
+            height: min(60vw, 60vh);
+            max-width: 750px;
+            max-height: 750px;
+            background-color: #000000; /* Черное паспарту */
+            border: 6px solid #ccc;
+            padding: 5vh; /* Паспарту */
+            margin-bottom: 3vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Само изображение */
+        .image-container img {
+            width: 90%;
+            height: 90%;
+            object-fit: cover;
+        }
+
+        /* Контейнер для текста поверх изображения */
+        .image-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5vh;
+        }
+
+        /* Настройка текста */
+        .top-text, .bottom-text {
+            font-size: 2vh; /* Размер текста */
+            color: white;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap; /* Запрет переноса строки */
+            overflow: hidden;
+        }
+
+        /* Позиционирование текста сверху */
+        .top-text {
+            top: 1%;
+        }
+
+        /* Позиционирование текста снизу */
+        .bottom-text {
+            bottom: 1%;
+        }
+
+        /* Кнопка */
+        .button {
+            display: inline-block;
+            background-color: white;
+            color: #6F00FF;
+            padding: 1.33vh 2.66vw;
+            font-size: 2vh;
+            text-decoration: none;
+            border-radius: 3.33vh;
+            margin-top: 2vh;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Эффект при наведении */
+        .button:hover {
+            background-color: #F0F0F0;
+        }
+    </style>
+</head>
+<body>
+    <h1>You're almost there!</h1>
+    <p>Just one more step—click the button to claim your gift.</p>
+    <div class="image-container">
+        <img src="images/IMG_0898.jpeg" alt="Your Image">
+        <div class="image-overlay">
+            <div class="top-text">Immersive Soundscapes</div>
+            <div class="bottom-text">MUSIC FOR MEDITATION</div>
+        </div>
+
+
+    </div>
+    
+
+
+<!-- Кнопка для скачивания -->
+<a href="https://cdn.jsdelivr.net/gh/Okeambu/sss-promo-audio/downloads/Gills%20Forever.zip" class="button" download>
+  🎁 Download Track
+</a>
+<br>
+
+<div style="color: white; font-size:2vh; font-family:Arial, sans-serif; margin-top:2vh;">
+A license for this track will be sent to your email.
+
+  <br>
+  Thank you for bringing sound into your space.
+</div>
+<br>
+<!-- Кнопка для перехода -->
+<a href="https://statuesound.com" class="button">
+  🔮 Return to Statue Sound
+</a>
+
+
+
+
+<script>
+document.getElementById('downloadBtn').addEventListener('click', function(event) {
+  event.preventDefault(); // Отменяем стандартное поведение ссылки (переход)
+  
+  // Создаем временный invisible элемент для скачивания
+  const link = document.createElement('a');
+  link.href = this.href;
+  link.download = ''; // атрибут download для запуска скачивания
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  // После запуска скачивания возвращаем пользователя на нужную страницу (например, на главную)
+  setTimeout(() => {
+    window.location.href = 'https://statuesound.com'; // здесь укажите URL, куда хотите вернуть пользователя
+  }, 1000); // задержка 1 секунда для запуска скачивания
+});
+</script>
+
+</body>
+</html>
